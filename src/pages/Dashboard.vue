@@ -6,7 +6,7 @@
                 <template v-for="component in mobileLayout">
                     <component
                         :is="extractPanelName(component.name)"
-                        :key="'dashboard-mobileLayout-' + component.name"
+                        :key="'dashboard-mobileLayout-' + component.name + (component.config?.id ?? '')"
                         :config="component.config"
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
@@ -18,7 +18,7 @@
                 <template v-for="component in tabletLayout1">
                     <component
                         :is="extractPanelName(component.name)"
-                        :key="'dashboard-tabletLayout1-' + component.name"
+                        :key="'dashboard-tabletLayout1-' + component.name + (component.config?.id ?? '')"
                         :config="component.config"
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
@@ -27,7 +27,7 @@
                 <template v-for="component in tabletLayout2">
                     <component
                         :is="extractPanelName(component.name)"
-                        :key="'dashboard-tabletLayout2-' + component.name"
+                        :key="'dashboard-tabletLayout2-' + component.name + (component.config?.id ?? '')"
                         :config="component.config"
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
@@ -39,7 +39,7 @@
                 <template v-for="component in desktopLayout1">
                     <component
                         :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout1-' + component.name"
+                        :key="'dashboard-desktopLayout1-' + component.name + (component.config?.id ?? '')"
                         :config="component.config"
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
@@ -48,7 +48,7 @@
                 <template v-for="component in desktopLayout2">
                     <component
                         :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout2-' + component.name"
+                        :key="'dashboard-desktopLayout2-' + component.name + (component.config?.id ?? '')"
                         :config="component.config"
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
@@ -60,7 +60,7 @@
                 <template v-for="component in widescreenLayout1">
                     <component
                         :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout1-' + component.name"
+                        :key="'dashboard-desktopLayout1-' + component.name + (component.config?.id ?? '')"
                         :config="component.config"
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
@@ -69,7 +69,7 @@
                 <template v-for="component in widescreenLayout2">
                     <component
                         :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout2-' + component.name"
+                        :key="'dashboard-desktopLayout2-' + component.name + (component.config?.id ?? '')"
                         :config="component.config"
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
@@ -78,7 +78,7 @@
                 <template v-for="component in widescreenLayout3">
                     <component
                         :is="extractPanelName(component.name)"
-                        :key="'dashboard-desktopLayout3-' + component.name"
+                        :key="'dashboard-desktopLayout3-' + component.name + (component.config?.id ?? '')"
                         :config="component.config"
                         :panel-id="extractPanelId(component.name)"></component>
                 </template>
